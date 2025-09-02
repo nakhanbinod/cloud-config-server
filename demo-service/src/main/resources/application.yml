@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: demo-service
+
+  config:
+    import: configserver:http://localhost:8071/
+  cloud:
+    config:
+      name: demo-service
+      profile: dev
