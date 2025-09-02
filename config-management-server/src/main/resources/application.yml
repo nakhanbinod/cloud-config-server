@@ -30,7 +30,3 @@ management:
 
 server:
   port: 8071
-
-logging:
-  level:
-    org.springframework.cloud.config.server: DEBUG
