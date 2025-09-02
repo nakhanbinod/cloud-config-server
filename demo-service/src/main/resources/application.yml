@@ -3,8 +3,19 @@ spring:
     name: demo-service
 
   config:
-    import: configserver:http://localhost:8071/
+    import:
+      - configserver:http://localhost:8071/
+      - vault://secret/Credentials
   cloud:
     config:
       name: demo-service
       profile: dev
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      authentication: token
+      token: c54cde87-7570-4349-84c0-6cb48d53d8e9
+      kv:
+        backend: secret
+        default-context: Credentials
