@@ -1,0 +1,22 @@
+package com.example.demoservice;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author binod-nakhan
+ * @created 2025-09-03
+ */
+
+@RestController
+public class HelloController {
+
+    @Value("${message.hello}")
+    private String helloMessage;
+
+    @GetMapping("/hello")
+    public String hello() {
+        return helloMessage;
+    }
+}

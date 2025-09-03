@@ -3,7 +3,7 @@ spring:
     name: config-management-server
 
   profiles:
-    active: vault,native
+    active: vault,git,native
 
   cloud:
     config:
@@ -19,6 +19,12 @@ spring:
           order: 1
         native:
           search-locations: classpath:/configurations/demo-service
+          order: 3
+        git:
+          uri: https://github.com/nakhanbinod/config-management-server.git
+          default-label: main
+          search-paths:
+            - demo-service
           order: 2
 
 management:
