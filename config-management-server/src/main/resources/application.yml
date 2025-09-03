@@ -26,6 +26,8 @@ spring:
           search-paths:
             - demo-service
           order: 2
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
 
 management:
   endpoints:
