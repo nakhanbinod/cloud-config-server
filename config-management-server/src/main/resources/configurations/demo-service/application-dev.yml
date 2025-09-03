@@ -2,6 +2,20 @@ spring:
   application:
     name: demo-service
 
+  # consul configuration
+  cloud:
+    consul:
+      port: 8500
+      host: localhost
+      discovery:
+        enabled: true
+        health-check-path: /actuator/health
+        health-check-interval: 15s
+        instance-id: ${spring.application.name}:${server.port}:${spring.cloud.client.ip-address}
+        prefer-ip-address: true
+        acl-token: ${CONSUL_TOKEN}
+
+  # Database config
   datasource:
     url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/demo
     username: ${DB_USERNAME}
