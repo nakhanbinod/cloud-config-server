@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Spring-Boot.iml" filepath="$PROJECT_DIR$/.idea/Spring-Boot.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-management-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/config-management-server.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-service.main.iml" />
     </modules>
   </component>
 </project>
